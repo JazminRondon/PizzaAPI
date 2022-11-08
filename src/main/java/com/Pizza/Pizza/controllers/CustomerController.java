@@ -31,4 +31,10 @@ public class CustomerController {
         return customerService.getCustomerById(id);
     }
 
+    @PutMapping("/customer/{customerId}")
+    public ResponseEntity<?> updatePoll(@RequestBody Customer customer, @PathVariable Long customerId) {
+
+        return customerService.updateCategory(customer,customerId);
+    }
+
 }

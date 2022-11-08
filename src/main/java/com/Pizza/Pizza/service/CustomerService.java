@@ -28,6 +28,10 @@ public class CustomerService {
 
         return customerRepository.findById(id);
     }
+    public ResponseEntity<?> updateCategory(Customer customer, Long customerId) {
+        Customer c = customerRepository.save(customer);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 
 
