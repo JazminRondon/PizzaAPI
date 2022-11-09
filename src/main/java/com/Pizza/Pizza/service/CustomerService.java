@@ -32,6 +32,10 @@ public class CustomerService {
         Customer c = customerRepository.save(customer);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    public void deleteCustomerById(Long categoryId) {
+
+        customerRepository.deleteById(categoryId);
+    }
 
 
 
